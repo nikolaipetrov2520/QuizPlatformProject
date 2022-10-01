@@ -26,7 +26,6 @@ namespace QuizPlatformProject.Data.Seeding
             var seeders = new List<ISeeder>
                           {
                               new QuestionsSeeder(),
-                              //new PossibleAnswerSeeder(),
                           };
 
             foreach (var seeder in seeders)

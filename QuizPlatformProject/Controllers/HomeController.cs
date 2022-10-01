@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using QuizPlatformProject.Data;
 using QuizPlatformProject.Data.Models;
+using QuizPlatformProject.Services.Sessions;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,22 +15,24 @@ using System.Threading.Tasks;
 namespace QuizPlatformProject.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("/home")]
     public class HomeController : ControllerBase
     {
-        private readonly ApplicationDbContext db;
+        private readonly ISessionsService sessionsService;
 
-        public HomeController(ApplicationDbContext db)
+        public HomeController(ISessionsService sessionsService)
         {
-            this.db = db;
+            this.sessionsService = sessionsService;
         }
 
         [HttpGet]
-        public List<Category> Get()
+        public string Get()
         {
-            var categoryList = db.Categories.ToList();
 
-            return categoryList;
+            var key = sessionsService.CreateSession();
+
+
+            return key;
         }
 
     }

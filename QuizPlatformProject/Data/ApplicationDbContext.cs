@@ -22,5 +22,7 @@ namespace QuizPlatformProject.Data
         public DbSet<Category> Categories { get; set; }
 
         public DbSet<Rank> Ranks { get; set; }
+
+        public DbSet<Session> Sessions { get; set; }
     }
 }
