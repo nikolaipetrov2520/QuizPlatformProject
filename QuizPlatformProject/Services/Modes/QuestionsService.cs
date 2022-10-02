@@ -18,7 +18,7 @@ namespace QuizPlatformProject.Services.Modes
             this.db = db;
         }
 
-        public List<QuestionOutputModel> GetQuestionsMode(QuestionsInputModel input)
+        public List<QuestionOutputModel> GetQuestions(QuestionsInputModel input)
         {
             var queriable = db.Questions.Where(d => d.Rank.Num == input.Difficulty).Include(x => x.Category).ToList();
 

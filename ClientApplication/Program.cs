@@ -4,14 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
-using System.Net.Http;
 
 
 namespace ClientApplication
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             var builder = new ConfigurationBuilder()
@@ -43,8 +41,7 @@ namespace ClientApplication
             }
             else
             {
-                int count = 3;
-                //var questions = GetQuestions(baseUrl, securityKey, count, selectedCategory);
+                SurvivalGame.Game(baseUrl, securityKey, categories);
             }
 
 
@@ -97,7 +94,7 @@ namespace ClientApplication
                 Console.WriteLine("Select Game Mode (Normal or Survival):");
                 string userMode = Console.ReadLine();
 
-                if (userMode.ToLower() == "normal" || userMode.ToLower() == "survivel")
+                if (userMode.ToLower() == "normal" || userMode.ToLower() == "survival")
                 {
                     selectedMode = userMode;
                 }

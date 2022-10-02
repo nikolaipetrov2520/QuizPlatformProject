@@ -30,7 +30,7 @@ namespace QuizPlatformProject.Controllers
         {
             var questions = new List<QuestionOutputModel>();
 
-            questions = questionsService.GetQuestionsMode(input);
+            questions = questionsService.GetQuestions(input);
 
             foreach (var question in questions)
             {

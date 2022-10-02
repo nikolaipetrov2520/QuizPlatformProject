@@ -1,12 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using QuizPlatformProject.Data;
 using QuizPlatformProject.Data.Seeding;
@@ -15,11 +12,6 @@ using QuizPlatformProject.Middleware;
 using QuizPlatformProject.Services.Answares;
 using QuizPlatformProject.Services.Modes;
 using QuizPlatformProject.Services.Questions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace QuizPlatformProject
 {

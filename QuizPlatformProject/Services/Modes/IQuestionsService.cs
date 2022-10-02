@@ -10,6 +10,6 @@ namespace QuizPlatformProject.Services.Modes
 {
     public interface IQuestionsService
     {
-        List<QuestionOutputModel> GetQuestionsMode(QuestionsInputModel input);
+        List<QuestionOutputModel> GetQuestions(QuestionsInputModel input);
     }
 }

@@ -2,10 +2,6 @@
 using QuizPlatformProject.InputModels;
 using QuizPlatformProject.OutputModels;
 using QuizPlatformProject.Services.Answares;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace QuizPlatformProject.Controllers
 {
