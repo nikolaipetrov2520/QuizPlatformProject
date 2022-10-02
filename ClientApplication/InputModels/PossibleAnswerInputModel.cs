@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClientApplication.InputModels
 {
-    class PossibleAnswerInputModel
+    public class PossibleAnswerInputModel
     {
         public int Id { get; set; }
         public string Answer { get; set; }

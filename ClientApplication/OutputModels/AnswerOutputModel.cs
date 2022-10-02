@@ -1,6 +1,6 @@
 ﻿namespace ClientApplication.OutputModels
 {
-    class AnswerOutputModel
+    public class AnswerOutputModel
     {
         public int QuestionId { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace ClientApplication.InputModels
 {
-    class AnswerInputModel
+    public class AnswerInputModel
     {
         public int CorrectCount { get; set; }
 

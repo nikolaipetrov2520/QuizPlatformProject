@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClientApplication.InputModels
 {
-    class QuestionInputModel
+    public class QuestionInputModel
     {
         public int Id { get; set; }
 
