@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ClientApplication.InputModels
+﻿namespace ClientApplication.InputModels
 {
+    using System.Collections.Generic;
+
     public class QuestionInputModel
     {
         public int Id { get; set; }

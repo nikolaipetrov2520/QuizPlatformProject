@@ -1,13 +1,10 @@
-﻿using ClientApplication.InputModels;
-using ClientApplication.OutputModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ClientApplication
+﻿namespace ClientApplication
 {
+    using ClientApplication.InputModels;
+    using ClientApplication.OutputModels;
+    using System;
+    using System.Collections.Generic;
+
     class SurvivalGame
     {
         public static void Game(string baseUrl, string securityKey, List<string> categories)
@@ -51,8 +48,6 @@ namespace ClientApplication
             }
             PrintResult(result);
         }
-
-
 
         private static void PrintResult(AnswerInputModel result)
         {

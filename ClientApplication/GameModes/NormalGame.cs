@@ -1,14 +1,10 @@
-﻿using ClientApplication.InputModels;
-using ClientApplication.OutputModels;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Net;
-
-
-namespace ClientApplication
+﻿namespace ClientApplication
 {
+    using ClientApplication.InputModels;
+    using ClientApplication.OutputModels;
+    using System;
+    using System.Collections.Generic;
+
     class NormalGame
     {
         public static void Game(string baseUrl, string securityKey, string selectedCategory)
