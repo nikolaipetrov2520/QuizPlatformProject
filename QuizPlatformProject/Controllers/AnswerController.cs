@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using QuizPlatformProject.InputModels;
-using QuizPlatformProject.OutputModels;
-using QuizPlatformProject.Services.Answares;
-
-namespace QuizPlatformProject.Controllers
+﻿namespace QuizPlatformProject.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+    using QuizPlatformProject.InputModels;
+    using QuizPlatformProject.OutputModels;
+    using QuizPlatformProject.Services.Answares;
+
     [ApiController]
     [Route("/answers")]
     public class AnswerController : Controller

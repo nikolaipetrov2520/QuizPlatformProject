@@ -1,20 +1,19 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
-using QuizPlatformProject.Data;
-using QuizPlatformProject.Data.Seeding;
-using QuizPlatformProject.Infrastructure;
-using QuizPlatformProject.Middleware;
-using QuizPlatformProject.Services.Answares;
-using QuizPlatformProject.Services.Modes;
-using QuizPlatformProject.Services.Questions;
-
 namespace QuizPlatformProject
 {
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Hosting;
+    using QuizPlatformProject.Data;
+    using QuizPlatformProject.Data.Seeding;
+    using QuizPlatformProject.Infrastructure;
+    using QuizPlatformProject.Middleware;
+    using QuizPlatformProject.Services.Answares;
+    using QuizPlatformProject.Services.Modes;
+    using QuizPlatformProject.Services.Questions;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -29,10 +28,10 @@ namespace QuizPlatformProject
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "QuizPlatformProject", Version = "v1" });
-            });
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "QuizPlatformProject", Version = "v1" });
+            //});
 
             services.AddTransient<ICategoriesService, CategoriesService>();
             services.AddTransient<IQuestionsService, QuestionsService>();

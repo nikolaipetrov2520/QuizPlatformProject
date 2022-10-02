@@ -1,12 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using QuizPlatformProject.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.Data
+﻿namespace QuizPlatformProject.Data
 {
+    using Microsoft.EntityFrameworkCore;
+    using QuizPlatformProject.Data.Models;
+
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions options)

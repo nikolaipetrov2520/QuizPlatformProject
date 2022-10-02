@@ -1,22 +1,20 @@
-﻿using Newtonsoft.Json;
-using QuizPlatformProject.Data.Models;
-using QuizPlatformProject.InputModels;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.Data.Seeding
+﻿namespace QuizPlatformProject.Data.Seeding
 {
+    using Newtonsoft.Json;
+    using QuizPlatformProject.Data.Models;
+    using QuizPlatformProject.InputModels;
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Threading.Tasks;
+
     public class QuestionsSeeder : ISeeder
     {
         public Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         {
-
             if (!dbContext.Questions.Any())
             {
-
                 using (StreamReader r = new StreamReader("questions.json"))
                 {
                     string json = r.ReadToEnd();
@@ -24,7 +22,6 @@ namespace QuizPlatformProject.Data.Seeding
 
                     foreach (var inputQuestion in inputQuestions)
                     {
-
                         var category = dbContext.Categories.FirstOrDefault(c => c.Name == inputQuestion.Category);
 
                         if (category == null)
@@ -65,9 +62,6 @@ namespace QuizPlatformProject.Data.Seeding
 
                         dbContext.SaveChanges();
 
-
-
-
                         foreach (var item in inputQuestion.PossibleAnswers)
                         {
                             var answare = new PossibleAnswer 
@@ -81,12 +75,8 @@ namespace QuizPlatformProject.Data.Seeding
                             dbContext.SaveChanges();
                         }
                     }
-
-                }
-
-                
+                }               
             }
-
             return Task.CompletedTask;
         }
     }

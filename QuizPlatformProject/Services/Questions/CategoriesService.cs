@@ -1,12 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using QuizPlatformProject.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.Services.Questions
+﻿namespace QuizPlatformProject.Services.Questions
 {
+    using Microsoft.EntityFrameworkCore;
+    using QuizPlatformProject.Data;
+    using System.Collections.Generic;
+
     public class CategoriesService : ICategoriesService
     {
 

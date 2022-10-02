@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.OutputModels
+﻿namespace QuizPlatformProject.OutputModels
 {
+    using System.Collections.Generic;
+
     public class QuestionOutputModel
     {
         public int Id { get; set; }

@@ -1,13 +1,8 @@
-﻿using QuizPlatformProject.Data;
-using QuizPlatformProject.InputModels;
-using QuizPlatformProject.OutputModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.Services.Modes
+﻿namespace QuizPlatformProject.Services.Modes
 {
+    using QuizPlatformProject.InputModels;
+    using QuizPlatformProject.OutputModels;
+    using System.Collections.Generic;
     public interface IQuestionsService
     {
         List<QuestionOutputModel> GetQuestions(QuestionsInputModel input);

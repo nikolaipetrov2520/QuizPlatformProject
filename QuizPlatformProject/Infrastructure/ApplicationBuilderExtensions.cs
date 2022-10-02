@@ -1,14 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using QuizPlatformProject.Data;
-using QuizPlatformProject.Data.Seeding;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.Infrastructure
+﻿namespace QuizPlatformProject.Infrastructure
 {
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.Extensions.DependencyInjection;
+    using QuizPlatformProject.Data;
+    using QuizPlatformProject.Data.Seeding;
+
     public static class ApplicationBuilderExtensions
     {
         public static IApplicationBuilder SeedData(this IApplicationBuilder app)

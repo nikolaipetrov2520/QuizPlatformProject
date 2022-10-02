@@ -1,19 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
-using QuizPlatformProject.Data;
-using QuizPlatformProject.Data.Models;
-using QuizPlatformProject.Services.Questions;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text.Json;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.Controllers
+﻿namespace QuizPlatformProject.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+    using QuizPlatformProject.Services.Questions;
+    using System.Collections.Generic;
+
     [ApiController]
     [Route("/")]
     public class HomeController : ControllerBase

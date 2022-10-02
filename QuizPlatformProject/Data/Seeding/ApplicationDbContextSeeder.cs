@@ -1,12 +1,11 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using Microsoft.Extensions.DependencyInjection;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.Data.Seeding
+﻿namespace QuizPlatformProject.Data.Seeding
 {
+    using Microsoft.Extensions.Logging;
+    using System;
+    using System.Collections.Generic;
+    using Microsoft.Extensions.DependencyInjection;
+    using System.Threading.Tasks;
+
     public class ApplicationDbContextSeeder : ISeeder
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)

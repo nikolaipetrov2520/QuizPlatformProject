@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.InputModels
+﻿namespace QuizPlatformProject.InputModels
 {
+    using System.Collections.Generic;
+
     public class InputQuestion
     {
         public int Id { get; set; }

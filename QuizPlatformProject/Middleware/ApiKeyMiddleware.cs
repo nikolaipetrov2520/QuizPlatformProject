@@ -1,13 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using QuizPlatformProject.Data;
-using QuizPlatformProject.Data.Models;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.Middleware
+﻿namespace QuizPlatformProject.Middleware
 {
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using QuizPlatformProject.Data;
+    using System.Threading.Tasks;
+
     public class ApiKeyMiddleware
     {
         private readonly RequestDelegate _next;

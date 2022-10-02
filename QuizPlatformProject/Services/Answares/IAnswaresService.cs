@@ -1,12 +1,8 @@
-﻿using QuizPlatformProject.Data;
-using QuizPlatformProject.OutputModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.Services.Answares
+﻿namespace QuizPlatformProject.Services.Answares
 {
+    using QuizPlatformProject.OutputModels;
+    using System.Collections.Generic;
+
     public interface IAnswaresService
     {
         List<PossibleAnswerOutputModel> GetAllAnswaresByQuestionId(int Id);

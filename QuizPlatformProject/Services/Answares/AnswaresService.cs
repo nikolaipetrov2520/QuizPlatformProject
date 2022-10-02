@@ -1,13 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using QuizPlatformProject.Data;
-using QuizPlatformProject.OutputModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.Services.Answares
+﻿namespace QuizPlatformProject.Services.Answares
 {
+    using Microsoft.EntityFrameworkCore;
+    using QuizPlatformProject.Data;
+    using QuizPlatformProject.OutputModels;
+    using System.Collections.Generic;
+    using System.Linq;
     public class AnswaresService : IAnswaresService
     {
         private readonly ApplicationDbContext db;

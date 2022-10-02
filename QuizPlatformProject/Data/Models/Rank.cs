@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.Data.Models
+﻿namespace QuizPlatformProject.Data.Models
 {
+    using System.Collections.Generic;
+
     public class Rank
     {
         public int Id { get; set; }

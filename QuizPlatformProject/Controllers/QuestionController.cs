@@ -1,16 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using QuizPlatformProject.Data;
-using QuizPlatformProject.InputModels;
-using QuizPlatformProject.OutputModels;
-using QuizPlatformProject.Services.Answares;
-using QuizPlatformProject.Services.Modes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace QuizPlatformProject.Controllers
+﻿namespace QuizPlatformProject.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+    using QuizPlatformProject.InputModels;
+    using QuizPlatformProject.OutputModels;
+    using QuizPlatformProject.Services.Answares;
+    using QuizPlatformProject.Services.Modes;
+    using System.Collections.Generic;
+
     [ApiController]
     [Route("/questions")]
     public class QuestionController : ControllerBase
