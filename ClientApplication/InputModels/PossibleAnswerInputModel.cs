@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace QuizPlatformProject.Data.Models
+namespace ClientApplication.InputModels
 {
-    public class Session
+    class PossibleAnswerInputModel
     {
         public int Id { get; set; }
-
-        public string Key { get; set; }
-
-        public bool IsClose { get; set; }
+        public string Answer { get; set; }
     }
 }

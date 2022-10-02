@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace QuizPlatformProject.Services.Questions
 {
-    public class QuestionsService : IQuestionsService
+    public class CategoriesService : ICategoriesService
     {
 
         private readonly ApplicationDbContext db;
 
-        public QuestionsService(ApplicationDbContext db)
+        public CategoriesService(ApplicationDbContext db)
         {
             this.db = db;
         }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace QuizPlatformProject.Services.Questions
 {
-    public interface IQuestionsService
+    public interface ICategoriesService
     {
         List<string> GetAllCategories();
     }

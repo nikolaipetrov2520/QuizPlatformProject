@@ -1,3 +1,4 @@
 {
-  "baseUrl": "https://localhost:44339"
+    "baseUrl": "https://localhost:44339",
+    "securityKey": "dx54fgvel5cxf54goxdvf458gxd3fgv"
 }

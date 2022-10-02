@@ -12,35 +12,32 @@ using System.Threading.Tasks;
 namespace QuizPlatformProject.Controllers
 {
     [ApiController]
-    [Route("/mode")]
-    public class ModeController : ControllerBase
+    [Route("/questions")]
+    public class QuestionController : ControllerBase
     {
-        private readonly IModesService modesService;
+        private readonly IQuestionsService questionsService;
         private readonly IAnswaresService answaresService;
 
-        public ModeController(IModesService modesService, IAnswaresService answaresService)
+        public QuestionController(IQuestionsService questionsService, IAnswaresService answaresService)
         {
-            this.modesService = modesService;
+            this.questionsService = questionsService;
             this.answaresService = answaresService;
         }
 
 
         [HttpPost]
-        public QuestionOutputModel Post(ModeInputModel input)
+        public List<QuestionOutputModel> Post(QuestionsInputModel input)
         {
-            var question = new QuestionOutputModel();
+            var questions = new List<QuestionOutputModel>();
 
-            if (input.Mode.ToLower() == "normal")
+            questions = questionsService.GetQuestionsMode(input);
+
+            foreach (var question in questions)
             {
-                question = modesService.GetQuestionsNormalMode();
                 question.PossibleAnswer = answaresService.GetAllAnswaresByQuestionId(question.Id);
             }
-            else if(input.Mode.ToLower() == "survival")
-            {
 
-            }
-
-            return question;
+            return questions;
         }
     }
 }

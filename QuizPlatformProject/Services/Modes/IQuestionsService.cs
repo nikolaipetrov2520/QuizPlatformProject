@@ -1,4 +1,5 @@
 ﻿using QuizPlatformProject.Data;
+using QuizPlatformProject.InputModels;
 using QuizPlatformProject.OutputModels;
 using System;
 using System.Collections.Generic;
@@ -7,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace QuizPlatformProject.Services.Modes
 {
-    public interface IModesService
+    public interface IQuestionsService
     {
-        QuestionOutputModel GetQuestionsNormalMode();
+        List<QuestionOutputModel> GetQuestionsMode(QuestionsInputModel input);
     }
 }

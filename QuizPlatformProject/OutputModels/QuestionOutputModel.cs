@@ -11,8 +11,6 @@ namespace QuizPlatformProject.OutputModels
 
         public string Text { get; set; }
 
-        public int CorrectAnswer { get; set; }
-
         public IEnumerable<PossibleAnswerOutputModel> PossibleAnswer { get; set; }
     }
 }

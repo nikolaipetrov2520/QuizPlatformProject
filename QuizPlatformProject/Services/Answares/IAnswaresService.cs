@@ -10,5 +10,7 @@ namespace QuizPlatformProject.Services.Answares
     public interface IAnswaresService
     {
         List<PossibleAnswerOutputModel> GetAllAnswaresByQuestionId(int Id);
+
+        bool GetCorrectAnswerByQuestionId(int id, int answer);
     }
 }

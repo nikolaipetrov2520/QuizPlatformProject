@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 
 namespace QuizPlatformProject.InputModels
 {
-    public class ModeInputModel
+    public class QuestionsInputModel
     {
-        public string Mode { get; set; }
+        public int Count { get; set; }
 
         public string[] Categories { get; set; }
+
+        public int Difficulty { get; set; }
     }
 }

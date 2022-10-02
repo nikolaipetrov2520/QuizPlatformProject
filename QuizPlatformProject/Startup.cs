@@ -15,7 +15,6 @@ using QuizPlatformProject.Middleware;
 using QuizPlatformProject.Services.Answares;
 using QuizPlatformProject.Services.Modes;
 using QuizPlatformProject.Services.Questions;
-using QuizPlatformProject.Services.Sessions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,16 +36,14 @@ namespace QuizPlatformProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddControllers().AddJsonOptions(x =>
-   x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
+            services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "QuizPlatformProject", Version = "v1" });
             });
 
-            services.AddTransient<ISessionsService, SessionsService>();
+            services.AddTransient<ICategoriesService, CategoriesService>();
             services.AddTransient<IQuestionsService, QuestionsService>();
-            services.AddTransient<IModesService, ModesService>();
             services.AddTransient<IAnswaresService, AnswaresService>();
         }
 

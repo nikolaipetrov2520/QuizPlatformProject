@@ -48,24 +48,6 @@ namespace QuizPlatformProject.Migrations
                     b.ToTable("Ranks");
                 });
 
-            modelBuilder.Entity("QuizPlatformProject.Data.Models.Session", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("IsClose")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Key")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Sessions");
-                });
-
             modelBuilder.Entity("QuizPlatformProject.Data.PossibleAnswer", b =>
                 {
                     b.Property<int>("Id")

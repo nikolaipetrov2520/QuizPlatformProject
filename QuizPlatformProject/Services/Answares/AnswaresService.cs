@@ -34,5 +34,18 @@ namespace QuizPlatformProject.Services.Answares
             
             return answers;
         }
+
+        public bool GetCorrectAnswerByQuestionId(int id, int answer)
+        {
+            var question = db.Questions.FirstOrDefault(x => x.Id == id);
+
+            if (question.CorrectAnswer == answer)
+            {
+                return true;
+            }
+
+            return false;
+
+        }
     }
 }
