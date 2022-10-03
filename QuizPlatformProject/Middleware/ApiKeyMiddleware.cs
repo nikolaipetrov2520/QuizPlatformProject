@@ -22,7 +22,7 @@
                                 var extractedApiKey))
             {
                 context.Response.StatusCode = 401;
-                await context.Response.WriteAsync("Api Key was not provided ");
+                await context.Response.WriteAsync("Security Kay not found");
                 return;
             }
 
