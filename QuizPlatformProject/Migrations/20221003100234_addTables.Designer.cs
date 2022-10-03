@@ -9,8 +9,8 @@ using QuizPlatformProject.Data;
 namespace QuizPlatformProject.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221002071011_addSecurityTable")]
-    partial class addSecurityTable
+    [Migration("20221003100234_addTables")]
+    partial class addTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,39 +48,6 @@ namespace QuizPlatformProject.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Ranks");
-                });
-
-            modelBuilder.Entity("QuizPlatformProject.Data.Models.SecurityKey", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Key")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("SecurityKeys");
-                });
-
-            modelBuilder.Entity("QuizPlatformProject.Data.Models.Session", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("IsClose")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Key")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Sessions");
                 });
 
             modelBuilder.Entity("QuizPlatformProject.Data.PossibleAnswer", b =>
